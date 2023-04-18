@@ -79,7 +79,7 @@ function markupListForOne(data) {
 }
 
 function markupListForAll(data) {
-  markupList = data.reduce((acc, { flags: { svg }, name: { official } }) => {
+ let markupList = data.reduce((acc, { flags: { svg }, name: { official } }) => {
     acc += `<li class = "countries">
     <img src="${svg ? svg : ''}" width = "35" height = "25">
     <p class = "text-name">${official ? official : ''}</p>
